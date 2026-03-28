@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eslam Muhammad Mahmoud — Pre-Sales & Tender Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:       #F7F5F0;
+  --white:    #FFFFFF;
+  --soft:     #F0EDE6;
+  --gold:     #B07D2A;
+  --gold-lt:  #F5EDD8;
+  --gold-md:  #D4A847;
+  --navy:     #1A2C45;
+  --navy-md:  #2B4270;
+  --teal:     #1C6560;
+  --teal-lt:  #E4F0EF;
+  --ink:      #1A1A18;
+  --ink-md:   #3D3D3A;
+  --ink-sf:   #6B6B67;
+  --ink-dm:   #9E9E9A;
+  --border:   #E2DDD5;
+  --border-md:#CCC7BC;
+  --serif:    'DM Serif Display', Georgia, serif;
+  --sans:     'DM Sans', system-ui, sans-serif;
+  --mono:     'DM Mono', monospace;
+}
+html { scroll-behavior: smooth; }
+body { background:var(--bg); color:var(--ink); font-family:var(--sans); font-size:15px; line-height:1.7; -webkit-font-smoothing:antialiased; }
+
+/* NAV */
+nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(247,245,240,0.95); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); }
+.nav-inner { max-width:1200px; margin:0 auto; padding:0 48px; height:64px; display:flex; align-items:center; justify-content:space-between; }
+.nav-brand { display:flex; align-items:center; gap:12px; }
+.nav-init { width:36px; height:36px; background:var(--navy); color:#fff; font-family:var(--serif); font-size:15px; display:flex; align-items:center; justify-content:center; border-radius:4px; flex-shrink:0; }
+.nav-nm { font-size:14px; font-weight:600; color:var(--ink); letter-spacing:.01em; }
+.nav-sb { font-size:11px; color:var(--ink-sf); }
+nav ul { list-style:none; display:flex; gap:36px; }
+nav a { font-size:13px; font-weight:500; color:var(--ink-sf); text-decoration:none; letter-spacing:.02em; transition:color .2s; }
+nav a:hover { color:var(--gold); }
+.nav-cta { background:var(--navy) !important; color:#fff !important; padding:8px 20px; border-radius:4px; }
+.nav-cta:hover { background:var(--navy-md) !important; color:#fff !important; }
+
+/* HERO */
+.hero { background:var(--navy); position:relative; overflow:hidden; padding-top:64px; }
+.hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 55% 80% at 72% 50%, rgba(176,125,42,.18) 0%,transparent 60%), radial-gradient(ellipse 35% 55% at 18% 80%, rgba(28,101,96,.14) 0%,transparent 50%); }
+.hero::after { content:''; position:absolute; inset:0; background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.022) 0,rgba(255,255,255,.022) 1px,transparent 1px,transparent 72px); }
+.hero-inner { position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:80px 48px 72px; display:grid; grid-template-columns:1fr 400px; gap:72px; align-items:center; }
+.hero-badge { display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11px; color:var(--gold-md); letter-spacing:.1em; text-transform:uppercase; border:1px solid rgba(212,168,71,.35); padding:5px 13px; border-radius:2px; margin-bottom:24px; }
+.hero-dot { width:5px; height:5px; background:var(--gold-md); border-radius:50%; animation:blink 2.5s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+.hero-name { font-family:var(--serif); font-size:clamp(50px,6vw,84px); line-height:1; color:#fff; margin-bottom:4px; letter-spacing:-.01em; }
+.hero-name-last { color:var(--gold-md); font-style:italic; }
+.hero-title { font-size:15px; font-weight:400; color:rgba(255,255,255,.58); margin-bottom:28px; letter-spacing:.02em; }
+.hero-title strong { color:rgba(255,255,255,.84); font-weight:500; }
+.hero-summary { font-size:15px; color:rgba(255,255,255,.58); line-height:1.85; margin-bottom:40px; max-width:540px; }
+.hero-summary strong { color:rgba(255,255,255,.84); font-weight:500; }
+.hero-actions { display:flex; gap:12px; flex-wrap:wrap; }
+.btn-gold { display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#fff; font-size:13px; font-weight:600; letter-spacing:.02em; text-decoration:none; padding:12px 26px; border-radius:4px; transition:background .2s,transform .15s; }
+.btn-gold:hover { background:var(--gold-md); transform:translateY(-1px); }
+.btn-wh { display:inline-flex; align-items:center; gap:8px; border:1px solid rgba(255,255,255,.22); color:rgba(255,255,255,.72); font-size:13px; font-weight:500; letter-spacing:.02em; text-decoration:none; padding:12px 26px; border-radius:4px; transition:border-color .2s,color .2s; }
+.btn-wh:hover { border-color:rgba(255,255,255,.50); color:#fff; }
+
+/* KPI panel */
+.hero-panel { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.11); border-radius:8px; overflow:hidden; }
+.panel-hdr { padding:14px 24px; border-bottom:1px solid rgba(255,255,255,.07); font-family:var(--mono); font-size:10px; color:rgba(255,255,255,.32); letter-spacing:.1em; text-transform:uppercase; }
+.kpi-grid { display:grid; grid-template-columns:1fr 1fr; }
+.kpi { padding:26px 24px; border-right:1px solid rgba(255,255,255,.06); border-bottom:1px solid rgba(255,255,255,.06); }
+.kpi:nth-child(even) { border-right:none; }
+.kpi:nth-child(3),.kpi:nth-child(4) { border-bottom:none; }
+.kpi-v { font-family:var(--serif); font-size:38px; line-height:1; color:#fff; margin-bottom:6px; }
+.kpi-v span { color:var(--gold-md); }
+.kpi-l { font-size:12px; color:rgba(255,255,255,.42); line-height:1.4; }
+.contact-strip { display:grid; grid-template-columns:1fr 1fr; border-top:1px solid rgba(255,255,255,.07); }
+.cs-item { padding:13px 24px; display:flex; align-items:center; gap:9px; border-right:1px solid rgba(255,255,255,.06); font-size:12px; color:rgba(255,255,255,.46); }
+.cs-item:last-child { border-right:none; }
+
+/* SECTIONS */
+.page { padding-top:64px; }
+.section { max-width:1200px; margin:0 auto; padding:88px 48px; }
+.divider { max-width:1200px; margin:0 auto; padding:0 48px; }
+.divider hr { border:none; border-top:1px solid var(--border); }
+.label { display:flex; align-items:center; gap:12px; font-family:var(--mono); font-size:11px; color:var(--gold); letter-spacing:.12em; text-transform:uppercase; margin-bottom:14px; font-weight:500; }
+.label::before { content:''; display:block; width:24px; height:1.5px; background:var(--gold); flex-shrink:0; }
+h2.st { font-family:var(--serif); font-size:clamp(32px,4vw,50px); line-height:1.08; color:var(--ink); letter-spacing:-.01em; margin-bottom:56px; }
+
+/* ABOUT */
+.about-g { display:grid; grid-template-columns:1fr 320px; gap:72px; align-items:start; }
+.about-text p { color:var(--ink-md); font-size:15.5px; line-height:1.85; margin-bottom:18px; }
+.about-text strong { color:var(--ink); font-weight:600; }
+.info-card { background:var(--white); border:1px solid var(--border); border-radius:8px; overflow:hidden; }
+.ic-hdr { padding:14px 22px; background:var(--navy); font-family:var(--mono); font-size:10px; color:rgba(255,255,255,.40); letter-spacing:.1em; text-transform:uppercase; }
+.ir { display:flex; align-items:flex-start; gap:14px; padding:15px 22px; border-bottom:1px solid var(--border); }
+.ir:last-child { border-bottom:none; }
+.ir-icon { width:30px; height:30px; background:var(--soft); border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:14px; flex-shrink:0; margin-top:1px; }
+.ir-k { font-family:var(--mono); font-size:10px; color:var(--ink-dm); letter-spacing:.06em; text-transform:uppercase; margin-bottom:2px; }
+.ir-v { font-size:13.5px; color:var(--ink); font-weight:500; line-height:1.45; }
+
+/* PROJECTS */
+.proj-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.pc { background:var(--white); border:1px solid var(--border); border-radius:8px; padding:30px 26px; position:relative; transition:border-color .22s,box-shadow .22s; }
+.pc:hover { border-color:var(--border-md); box-shadow:0 4px 22px rgba(26,44,69,.07); }
+.pc.hero { grid-column:span 2; display:grid; grid-template-columns:1fr auto; gap:44px; align-items:start; background:var(--navy); border-color:var(--navy); }
+.pc.hero:hover { box-shadow:0 8px 30px rgba(26,44,69,.22); }
+.pc:not(.hero)::before { content:''; position:absolute; left:0; top:20px; bottom:20px; width:3px; background:var(--gold); border-radius:0 2px 2px 0; }
+.ps { font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; font-weight:500; margin-bottom:8px; }
+.pc:not(.hero) .ps { color:var(--gold); }
+.pc.hero .ps { color:var(--gold-md); }
+.pn { font-family:var(--serif); line-height:1.2; margin-bottom:6px; }
+.pc:not(.hero) .pn { font-size:20px; color:var(--ink); }
+.pc.hero .pn { font-size:26px; color:#fff; }
+.pcl { font-size:12px; color:var(--ink-sf); margin-bottom:16px; }
+.pc.hero .pcl { color:rgba(255,255,255,.46); }
+.pdesc { font-size:13.5px; color:var(--ink-sf); line-height:1.75; margin-bottom:18px; }
+.pc.hero .pdesc { color:rgba(255,255,255,.62); }
+.tags { display:flex; flex-wrap:wrap; gap:7px; }
+.t { font-family:var(--mono); font-size:10px; letter-spacing:.04em; padding:4px 10px; border-radius:2px; font-weight:500; }
+.t-teal { color:var(--teal); background:var(--teal-lt); }
+.t-gold { color:var(--gold); background:var(--gold-lt); }
+.t-wh { color:#fff; background:rgba(255,255,255,.12); }
+.pval { text-align:right; flex-shrink:0; }
+.psar { font-family:var(--serif); font-size:50px; line-height:1; color:var(--gold-md); }
+.psar-s { font-family:var(--mono); font-size:10px; color:rgba(255,255,255,.30); letter-spacing:.08em; text-transform:uppercase; margin-top:4px; }
+.psv { display:block; font-family:var(--serif); font-size:26px; color:var(--navy); margin-bottom:2px; }
+.psv-s { font-family:var(--mono); font-size:10px; color:var(--ink-dm); letter-spacing:.06em; text-transform:uppercase; }
+.sector-strip { background:var(--white); border:1px solid var(--border); border-radius:8px; padding:22px 28px; display:flex; align-items:center; gap:28px; flex-wrap:wrap; margin-top:18px; }
+.ss-lbl { font-family:var(--mono); font-size:10px; color:var(--ink-dm); letter-spacing:.1em; text-transform:uppercase; white-space:nowrap; font-weight:500; }
+
+/* EXPERIENCE */
+.timeline { position:relative; }
+.timeline::before { content:''; position:absolute; left:0; top:8px; bottom:60px; width:1px; background:var(--border-md); }
+.exp-blk { padding-left:44px; padding-bottom:68px; position:relative; }
+.exp-blk:last-child { padding-bottom:0; }
+.exp-dot { position:absolute; left:-8px; top:6px; width:16px; height:16px; background:var(--white); border:2px solid var(--gold); border-radius:50%; }
+.ep { font-family:var(--mono); font-size:11px; color:var(--ink-dm); letter-spacing:.06em; margin-bottom:10px; }
+.er { font-family:var(--serif); font-size:26px; color:var(--ink); line-height:1.2; margin-bottom:4px; }
+.ec { font-size:13px; font-weight:500; color:var(--teal); margin-bottom:22px; }
+.eb { list-style:none; display:flex; flex-direction:column; gap:11px; }
+.eb li { display:grid; grid-template-columns:18px 1fr; gap:8px; font-size:14.5px; color:var(--ink-md); line-height:1.7; }
+.eb li::before { content:'·'; color:var(--gold); font-size:22px; line-height:1.3; font-weight:700; }
+.eb strong { color:var(--ink); font-weight:600; }
+.exp-cta { margin-top:22px; padding:16px 20px; background:var(--gold-lt); border:1px solid rgba(176,125,42,.18); border-radius:6px; font-family:var(--mono); font-size:12px; color:var(--gold); line-height:1.6; }
+
+/* SKILLS */
+.skills-g { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.sb { background:var(--white); border:1px solid var(--border); border-radius:8px; padding:24px 22px; }
+.sb-t { font-size:13px; font-weight:600; color:var(--ink); margin-bottom:16px; padding-bottom:12px; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:7px; }
+.sl { list-style:none; display:flex; flex-direction:column; gap:9px; }
+.sl li { font-size:13.5px; color:var(--ink-md); display:flex; align-items:center; gap:9px; line-height:1.4; }
+.sl li::before { content:''; display:block; width:5px; height:5px; background:var(--gold); border-radius:50%; flex-shrink:0; }
+
+/* AI SECTION */
+.ai-sect { background:var(--navy); }
+.ai-inner { max-width:1200px; margin:0 auto; padding:88px 48px; }
+.ai-inner .label { color:var(--gold-md); }
+.ai-inner .label::before { background:var(--gold-md); }
+.ai-inner h2.st { color:#fff; }
+.ai-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.ai-c { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.10); border-radius:8px; padding:30px 26px; transition:background .2s,border-color .2s; }
+.ai-c:hover { background:rgba(255,255,255,.07); border-color:rgba(212,168,71,.28); }
+.ai-num { font-family:var(--mono); font-size:11px; color:var(--gold-md); letter-spacing:.1em; margin-bottom:14px; }
+.ai-ttl { font-family:var(--serif); font-size:19px; color:#fff; line-height:1.3; margin-bottom:13px; }
+.ai-desc { font-size:14px; color:rgba(255,255,255,.54); line-height:1.75; margin-bottom:18px; }
+.ai-met { font-family:var(--mono); font-size:11px; color:var(--gold-md); letter-spacing:.03em; padding-top:14px; border-top:1px solid rgba(255,255,255,.08); }
+
+/* EDU + CERTS */
+.ec-g { display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:start; }
+.edu-c { background:var(--white); border:1px solid var(--border); border-radius:8px; overflow:hidden; }
+.edu-top { background:var(--navy); padding:30px 30px 26px; }
+.edu-deg { font-family:var(--serif); font-size:22px; color:#fff; line-height:1.2; margin-bottom:10px; }
+.edu-sch { font-size:13px; color:rgba(255,255,255,.46); line-height:1.5; }
+.edu-body { padding:22px 30px; display:flex; flex-direction:column; gap:14px; }
+.edu-itm { display:flex; align-items:flex-start; gap:12px; }
+.grade { display:inline-block; font-family:var(--mono); font-size:10px; font-weight:500; letter-spacing:.05em; text-transform:uppercase; padding:4px 10px; border-radius:2px; flex-shrink:0; margin-top:2px; }
+.grade.g { background:var(--teal-lt); color:var(--teal); }
+.grade.e { background:var(--gold-lt); color:var(--gold); }
+.edu-txt { font-size:13.5px; color:var(--ink-md); line-height:1.55; }
+.edu-txt strong { color:var(--ink); font-weight:600; }
+.cert-c { background:var(--white); border:1px solid var(--border); border-radius:8px; overflow:hidden; }
+.cert-hdr { padding:14px 22px; background:var(--soft); font-family:var(--mono); font-size:10px; color:var(--ink-dm); letter-spacing:.1em; text-transform:uppercase; border-bottom:1px solid var(--border); }
+.cert-row { display:flex; align-items:center; gap:16px; padding:14px 22px; border-bottom:1px solid var(--border); transition:background .15s; }
+.cert-row:last-child { border-bottom:none; }
+.cert-row:hover { background:var(--bg); }
+.cy { font-family:var(--mono); font-size:12px; font-weight:500; color:var(--gold); min-width:36px; }
+.cn { font-size:13.5px; color:var(--ink); font-weight:500; flex:1; line-height:1.4; }
+.ci { font-size:12px; color:var(--ink-dm); white-space:nowrap; text-align:right; }
+
+/* CONTACT */
+.contact-sect { background:var(--white); border-top:1px solid var(--border); }
+.contact-inner { max-width:1200px; margin:0 auto; padding:88px 48px; display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; }
+.contact-inner h2 { font-family:var(--serif); font-size:clamp(32px,4vw,50px); color:var(--ink); line-height:1.1; letter-spacing:-.01em; margin-bottom:14px; }
+.contact-inner p { color:var(--ink-sf); font-size:15px; line-height:1.8; }
+.cl { display:flex; flex-direction:column; gap:10px; }
+.cl-link { display:flex; align-items:center; gap:16px; padding:17px 22px; background:var(--bg); border:1px solid var(--border); border-radius:6px; text-decoration:none; transition:border-color .2s,background .2s; }
+.cl-link:hover { border-color:var(--border-md); background:var(--soft); }
+.cl-icon { width:36px; height:36px; background:var(--navy); border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:15px; flex-shrink:0; }
+.cl-lbl { font-size:11px; color:var(--ink-dm); font-family:var(--mono); letter-spacing:.05em; text-transform:uppercase; margin-bottom:2px; }
+.cl-val { font-size:14px; color:var(--ink); font-weight:500; }
+
+/* FOOTER */
+footer { background:var(--navy); padding:26px 48px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+.fl { font-size:13px; color:rgba(255,255,255,.38); }
+.fl strong { color:rgba(255,255,255,.62); font-weight:500; }
+.fr { font-family:var(--mono); font-size:11px; color:rgba(255,255,255,.28); letter-spacing:.06em; }
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .hero-inner,.contact-inner{grid-template-columns:1fr;gap:44px;padding:64px 24px;}
+  .nav-inner{padding:0 24px;}
+  nav ul{display:none;}
+  .section{padding:64px 24px;}
+  .divider{padding:0 24px;}
+  .about-g,.proj-grid,.skills-g,.ai-cards,.ec-g{grid-template-columns:1fr;}
+  .pc.hero{grid-column:span 1;grid-template-columns:1fr;gap:20px;}
+  .ai-inner{padding:64px 24px;}
+  footer{padding:20px 24px;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <div class="nav-init">EM</div>
+      <div>
+        <div class="nav-nm">Eslam Muhammad Mahmoud</div>
+        <div class="nav-sb">Pre-Sales &amp; Tender Engineer · LV Switchgear Specialist</div>
+      </div>
+    </div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><div class="hero-dot"></div>Available for new opportunities</div>
+      <h1 class="hero-name">Eslam<br><span class="hero-name-last">Muhammad</span></h1>
+      <p class="hero-title"><strong>Pre-Sales &amp; Tender Engineer</strong> &nbsp;·&nbsp; LV Switchgear Specialist &nbsp;·&nbsp; Revenue Enabler</p>
+      <p class="hero-summary">
+        Results-driven engineer with <strong>4+ years</strong> translating complex LV switchgear requirements
+        into competitive, winning proposals for <strong>high-value KSA &amp; Egypt projects</strong>.
+        Combines deep IEC 61439 expertise with sharp commercial acumen — contributing to
+        <strong>SAR 20M+ in secured contracts</strong> for marquee clients including NEOM,
+        Al Othaim Real Estate, Al Rashid Group, and SRMG.
+      </p>
+      <div class="hero-actions">
+        <a href="mailto:eslammuhammad20@gmail.com" class="btn-gold">Email Me ↗</a>
+        <a href="https://linkedin.com/in/eslammuhammad20" target="_blank" class="btn-wh">View LinkedIn</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="panel-hdr">Commercial Track Record</div>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-v"><span>20M</span>+</div>
+          <div class="kpi-l">SAR contracts<br>secured</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-v">150<span>+</span></div>
+          <div class="kpi-l">Proposals<br>submitted</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-v"><span>159M</span></div>
+          <div class="kpi-l">SAR total<br>tendered</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-v">5<span>+</span></div>
+          <div class="kpi-l">Major projects<br>awarded</div>
+        </div>
+      </div>
+      <div class="contact-strip">
+        <div class="cs-item">📍 Cairo, Egypt</div>
+        <div class="cs-item">📱 +20 115 693 8996</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="label">Profile</div>
+  <h2 class="st">About Me</h2>
+  <div class="about-g">
+    <div class="about-text">
+      <p>I am a Pre-Sales &amp; Tender Engineer specialising in <strong>Low Voltage switchgear systems</strong>, with a proven track record of converting complex technical specifications into commercially optimised, winning proposals for major infrastructure projects across Saudi Arabia and Egypt.</p>
+      <p>My expertise spans the full Schneider Electric LV portfolio — <strong>BlokSet, Prisma P/G, PrismaSeT I, and Disbo</strong> — combined with hands-on proficiency in IEC 61439 compliance, short-circuit analysis via Ecodial, and bus bar selection. I also maintain working knowledge of MV distribution systems, transformer sizing, and MV/LV interface design, positioning me for broader power distribution roles.</p>
+      <p>Beyond technical execution, I take a commercial and client-facing approach — presenting and defending technical submittals, negotiating deviations with procurement and suppliers, and collaborating closely with consultants and end users to <strong>accelerate approval cycles and reduce revision loops</strong>.</p>
+      <p>A self-driven technologist, I have built my own <strong>suite of AI-assisted and Excel-based engineering tools</strong> — including a Claude AI-powered LV panel spec analyser and custom Schneider Electric reference selectors with 2,700+ auto-populating catalog data points — significantly cutting BOM preparation time across multi-million SAR tender workflows.</p>
+    </div>
+    <div>
+      <div class="info-card">
+        <div class="ic-hdr">Personal Details</div>
+        <div class="ir"><div class="ir-icon">📍</div><div><div class="ir-k">Location</div><div class="ir-v">Cairo, Egypt</div></div></div>
+        <div class="ir"><div class="ir-icon">📧</div><div><div class="ir-k">Email</div><div class="ir-v">eslammuhammad20@gmail.com</div></div></div>
+        <div class="ir"><div class="ir-icon">📱</div><div><div class="ir-k">Phone</div><div class="ir-v">+20 115 693 8996</div></div></div>
+        <div class="ir"><div class="ir-icon">🔗</div><div><div class="ir-k">LinkedIn</div><div class="ir-v">linkedin.com/in/eslammuhammad20</div></div></div>
+        <div class="ir"><div class="ir-icon">🌐</div><div><div class="ir-k">Languages</div><div class="ir-v">Arabic — Native<br>English — Fluent</div></div></div>
+        <div class="ir"><div class="ir-icon">🎓</div><div><div class="ir-k">Education</div><div class="ir-v">BSc Electrical Power Engineering<br>Banha University, 2020</div></div></div>
+        <div class="ir"><div class="ir-icon">🏢</div><div><div class="ir-k">Current Employer</div><div class="ir-v">Golden Energy Solutions Factory (GES)<br>Authorized SE Panel Builder</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="label">Portfolio</div>
+  <h2 class="st">Key Projects</h2>
+  <div class="proj-grid">
+
+    <div class="pc hero">
+      <div>
+        <div class="ps">NEOM Giga-Project · Vision 2030</div>
+        <h3 class="pn">NEOM CORAL (KAUST)</h3>
+        <p class="pcl">Client: Hassan Allam Construction &nbsp;|&nbsp; Feb 2023 – Jan 2024</p>
+        <p class="pdesc">Led all technical and commercial activities for a prestigious NEOM development. Produced IEC 61439-compliant evaluations across BlokSet, Prisma P, and Prisma G. Full short-circuit analysis and selectivity coordination via Ecodial — all submissions accepted without consultant objection. Zero drawing revision cycles post-approval, enabling on-schedule delivery.</p>
+        <div class="tags">
+          <span class="t t-wh">BlokSet</span>
+          <span class="t t-wh">Prisma P/G</span>
+          <span class="t t-wh">IEC 61439</span>
+          <span class="t t-wh">Ecodial</span>
+          <span class="t t-wh">Short-Circuit Analysis</span>
+        </div>
+      </div>
+      <div class="pval">
+        <div class="psar">4.1M</div>
+        <div class="psar-s">SAR Contract Value</div>
+      </div>
+    </div>
+
+    <div class="pc">
+      <div class="ps">Real Estate</div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:14px">
+        <h3 class="pn">Othaim Park — Dammam</h3>
+        <div style="text-align:right;flex-shrink:0"><div class="psv">4.4M</div><div class="psv-s">SAR</div></div>
+      </div>
+      <p class="pcl">Al Othaim Real Estate · Construction Land Co. (CLC) &nbsp;|&nbsp; Oct 2023 – Present</p>
+      <p class="pdesc">Full-scope technical and commercial evaluation for IEC 61439-compliant LV switchgear. Negotiated with procurement on component selection; led cross-functional design reviews eliminating costly rework.</p>
+      <div class="tags"><span class="t t-teal">BlokSet</span><span class="t t-teal">Disbo</span><span class="t t-gold">Cost-Optimised</span></div>
+    </div>
+
+    <div class="pc">
+      <div class="ps">Retail &amp; Hospitality</div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:14px">
+        <h3 class="pn">Al Rashid Mall — Khobar</h3>
+        <div style="text-align:right;flex-shrink:0"><div class="psv">3.58M</div><div class="psv-s">SAR</div></div>
+      </div>
+      <p class="pcl">Danah Real Estate · Al Rashid Group &nbsp;|&nbsp; Jun 2023 – Nov 2024</p>
+      <p class="pdesc">Landmark KSA retail destination. Full Ecodial analysis and selectivity coordination. Zero non-compliance findings on client or consultant review. All shop drawings approved on schedule with no post-approval revision cycles.</p>
+      <div class="tags"><span class="t t-teal">Prisma P/G</span><span class="t t-teal">Ecodial</span><span class="t t-gold">Zero Non-Compliance</span></div>
+    </div>
+
+    <div class="pc">
+      <div class="ps">Government Infrastructure</div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:14px">
+        <h3 class="pn">Northern Cultural District — P3 Car Park</h3>
+        <div style="text-align:right;flex-shrink:0"><div class="psv">2.9M</div><div class="psv-s">SAR</div></div>
+      </div>
+      <p class="pcl">BINYAH · Saudi Real Estate Infrastructure Co. &nbsp;|&nbsp; Feb 2023 – Jan 2024</p>
+      <p class="pdesc">Managed LV switchgear scope for the NCD development. Proposal accepted with no major commercial deviations. Zero drawing revision cycles post-approval built lasting client confidence.</p>
+      <div class="tags"><span class="t t-teal">BlokSet</span><span class="t t-teal">Prisma P/G</span><span class="t t-gold">No Deviations</span></div>
+    </div>
+
+    <div class="pc">
+      <div class="ps">Media &amp; Commercial</div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:14px">
+        <h3 class="pn">SRMG Headquarters — KAFD Riyadh</h3>
+        <div style="text-align:right;flex-shrink:0"><div class="psv">2.8M</div><div class="psv-s">SAR</div></div>
+      </div>
+      <p class="pcl">Absal Paul Contracting · SRMG · King Abdullah Financial District &nbsp;|&nbsp; Nov 2022 – Oct 2023</p>
+      <p class="pdesc">Flagship HQ at KAFD. Comprehensive BOM, Ecodial analysis, and competitive pricing securing successful contract award. Zero project delays attributable to documentation throughout the project lifecycle.</p>
+      <div class="tags"><span class="t t-teal">KAFD</span><span class="t t-teal">Ecodial</span><span class="t t-gold">Award Secured</span></div>
+    </div>
+
+  </div>
+  <div class="sector-strip">
+    <div class="ss-lbl">Sectors Covered</div>
+    <div class="tags">
+      <span class="t t-gold">Vision 2030 Giga-Projects</span>
+      <span class="t t-gold">Healthcare &amp; Medical</span>
+      <span class="t t-gold">Real Estate &amp; Hospitality</span>
+      <span class="t t-gold">Government &amp; Infrastructure</span>
+      <span class="t t-teal">NEOM · Diriyah · AMAALA · QIDDIYA</span>
+      <span class="t t-teal">SFMC · NUPCO · Al Khobar Hospital</span>
+      <span class="t t-teal">Riyadh Bank HQ · Kempinski · Intercontinental</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="label">Career History</div>
+  <h2 class="st">Experience</h2>
+  <div class="timeline">
+
+    <div class="exp-blk">
+      <div class="exp-dot"></div>
+      <div class="ep">September 2022 — Present</div>
+      <h3 class="er">Electrical Tender &amp; Quotation Engineer</h3>
+      <div class="ec">Golden Energy Solutions Factory (GES) · Authorized Schneider Electric Panel Builder · Cairo, Egypt</div>
+      <ul class="eb">
+        <li><span><strong>Contributed to securing SAR 20M+</strong> in LV switchgear awards for high-profile KSA clients including Al Othaim Real Estate, Al Rashid Group, Hassan Allam Construction, BINYAH, and SRMG through technically superior, competitively priced proposals.</span></li>
+        <li><span>Developed and delivered <strong>optimised BOMs and cost sheets</strong> for BlokSet, Prisma P/G, PrismaSeT I, and Disbo assemblies — achieving client budget alignment and improving overall offer competitiveness to directly support deal closure.</span></li>
+        <li><span>Engaged Schneider Electric technical teams, clients, and consultants to align solutions with project specifications, <strong>strengthening offer acceptance rate</strong> on multi-million SAR tenders.</span></li>
+        <li><span>Presented and defended technical submittals on-site, resolving comments and queries — <strong>accelerating approval cycles and reducing revision loops</strong>.</span></li>
+        <li><span><strong>Self-developed a suite of AI-assisted and Excel-based engineering tools</strong> — custom reference selectors (ACB NT/NW, MTZ Active, NS MCCB) with 2,700+ auto-populating catalog data points and a Claude AI-powered LV panel spec analyser — reducing BOM preparation time and eliminating manual catalog lookup errors.</span></li>
+        <li><span>Executed bus bar selection, short-circuit analysis, and selectivity coordination via Ecodial, producing <strong>IEC 61439-compliant designs that passed consultant review without technical objections</strong>.</span></li>
+        <li><span>Supervised AutoCAD draftsmen in shop drawing development and managed production handover; supported an active KSA sales pipeline of <strong>SAR 18M+ through rapid, high-quality tender responses</strong>.</span></li>
+      </ul>
+      <div class="exp-cta">📊 &nbsp; 150+ proposals submitted &nbsp;·&nbsp; SAR 159M+ total tendered &nbsp;·&nbsp; 5+ projects awarded (SAR 18M+) &nbsp;·&nbsp; Sectors: Vision 2030 · Healthcare · Real Estate · Government</div>
+    </div>
+
+    <div class="exp-blk">
+      <div class="exp-dot"></div>
+      <div class="ep">January 2022 — September 2022</div>
+      <h3 class="er">Electrical Tender &amp; Quotation Engineer</h3>
+      <div class="ec">Power Services Projects (PSP) · Authorized Schneider Electric Panel Builder · Al Jizah, Egypt</div>
+      <ul class="eb">
+        <li><span>Prepared competitive technical and commercial quotations for LV switchgear panels, <strong>improving offer win rate</strong> by precisely matching Schneider Electric product specifications to client drawings.</span></li>
+        <li><span>Collaborated with sales representatives and clients to clarify project requirements, ensuring <strong>technically sound and commercially attractive solutions</strong> aligned with client budget constraints.</span></li>
+        <li><span>Reviewed customer specifications and drawings to identify deviations early, enabling <strong>faster turnaround of corrected, compliant offers</strong> and reducing back-and-forth with consultants.</span></li>
+        <li><span><strong>Optimised project costs</strong> through value engineering — balancing technical compliance with commercial competitiveness to support successful project awards.</span></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="label">Expertise</div>
+  <h2 class="st">Skills &amp; Tools</h2>
+  <div class="skills-g">
+    <div class="sb">
+      <div class="sb-t"><span>⚡</span> LV Electrical Engineering</div>
+      <ul class="sl">
+        <li>LV &amp; MV Switchgear Design</li>
+        <li>IEC 61439 Standards Compliance</li>
+        <li>Bus Bar Selection</li>
+        <li>Short-Circuit Analysis</li>
+        <li>Selectivity Coordination</li>
+        <li>BOM Preparation &amp; Cost Estimation</li>
+        <li>Technical Submittals</li>
+      </ul>
+    </div>
+    <div class="sb">
+      <div class="sb-t"><span>⚙️</span> Schneider Electric Systems</div>
+      <ul class="sl">
+        <li>BlokSet (MDB / SMDB)</li>
+        <li>Prisma P &amp; Prisma G</li>
+        <li>PrismaSeT I</li>
+        <li>Disbo</li>
+        <li>MasterPact ACB NT / NW</li>
+        <li>MTZ Active MTZ1 / MTZ2 / MTZ3</li>
+        <li>NS MCCB Series</li>
+      </ul>
+    </div>
+    <div class="sb">
+      <div class="sb-t"><span>💼</span> Pre-Sales &amp; Commercial</div>
+      <ul class="sl">
+        <li>Tender Management</li>
+        <li>Cost Optimisation</li>
+        <li>Pre-Sales Engineering</li>
+        <li>Technical Proposal Writing</li>
+        <li>Client &amp; Consultant Engagement</li>
+        <li>Offer Competitiveness Analysis</li>
+        <li>Deviation Negotiation</li>
+      </ul>
+    </div>
+    <div class="sb">
+      <div class="sb-t"><span>🖥️</span> Technical Software</div>
+      <ul class="sl">
+        <li>Ecodial (SC &amp; Selectivity Analysis)</li>
+        <li>AutoCAD (Drawings &amp; Supervision)</li>
+        <li>MS Excel — Advanced / Macros</li>
+        <li>DIALux (Lighting Design)</li>
+        <li>Revit (BIM)</li>
+      </ul>
+    </div>
+    <div class="sb">
+      <div class="sb-t"><span>🔌</span> MV Systems (Working Knowledge)</div>
+      <ul class="sl">
+        <li>MV Distribution Systems (RMU)</li>
+        <li>Protection Schemes &amp; Relay Concepts</li>
+        <li>MV / LV Interface Design Principles</li>
+        <li>Transformer Sizing</li>
+        <li>Single-Line Diagram Design</li>
+        <li>MV Network Configurations</li>
+      </ul>
+    </div>
+    <div class="sb">
+      <div class="sb-t"><span>🤖</span> AI &amp; Automation</div>
+      <ul class="sl">
+        <li>Prompt Engineering</li>
+        <li>AI-Augmented Tender Workflows</li>
+        <li>Excel Automation (INDEX / MATCH)</li>
+        <li>Custom Configurator Tool Development</li>
+        <li>AI-Powered Spec Analysis</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- AI SECTION -->
+<section class="ai-sect">
+  <div class="ai-inner">
+    <div class="label">Innovation</div>
+    <h2 class="st">Self-Built Tools &amp; AI Systems</h2>
+    <div class="ai-cards">
+      <div class="ai-c">
+        <div class="ai-num">01 / EXCEL AUTOMATION</div>
+        <h3 class="ai-ttl">Schneider Electric Reference Selector Suite</h3>
+        <p class="ai-desc">Four custom Excel configurator tools covering MasterPact ACB NT/NW, MTZ Active MTZ1/2/3, NS MCCB, and MTZ Accessories. Select frame, rating, and trip unit — commercial references generate instantly via INDEX/MATCH engines, eliminating manual catalog lookups across every tender workflow.</p>
+        <div class="ai-met">2,700+ catalog reference rows · Eliminates manual lookup errors · Reduces BOM preparation time significantly</div>
+      </div>
+      <div class="ai-c">
+        <div class="ai-num">02 / AI-POWERED ANALYSIS</div>
+        <h3 class="ai-ttl">LV Panel Specification Analyser</h3>
+        <p class="ai-desc">Custom Claude AI prompt system that reads LV panel specification documents and generates structured compliance analyses — automatically identifying panel types, protection schemes, IEC 61439 requirements, and deviations. Accelerates submittal review on complex multi-scope tenders.</p>
+        <div class="ai-met">Accelerates submittal review · Supports complex multi-scope proposals</div>
+      </div>
+      <div class="ai-c">
+        <div class="ai-num">03 / WORKFLOW INTEGRATION</div>
+        <h3 class="ai-ttl">AI-Augmented Tendering Workflow</h3>
+        <p class="ai-desc">Generative AI integrated into end-to-end tender activities: specification interpretation, deviation identification, and proposal drafting. Reduces rework and improves turnaround speed on multi-million SAR bids. Practical prompt engineering applied to a specialised electrical engineering context.</p>
+        <div class="ai-met">Reduces rework · Improves bid turnaround · Applied to SAR 159M+ pipeline</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION + CERTS -->
+<section class="section">
+  <div class="label">Academic &amp; Professional Development</div>
+  <h2 class="st">Education &amp; Certifications</h2>
+  <div class="ec-g">
+    <div>
+      <div class="edu-c">
+        <div class="edu-top">
+          <h3 class="edu-deg">BSc Electrical Power &amp; Machines Engineering</h3>
+          <p class="edu-sch">Shubra Faculty of Engineering, Banha University<br>Cairo, Egypt &nbsp;·&nbsp; 2015 – 2020</p>
+        </div>
+        <div class="edu-body">
+          <div class="edu-itm">
+            <span class="grade g">Very Good</span>
+            <div class="edu-txt">Overall graduation grade across the full programme.</div>
+          </div>
+          <div class="edu-itm">
+            <span class="grade e">Excellent</span>
+            <div class="edu-txt"><strong>Graduation Project:</strong> Electrical Services Design &amp; Home Automation of a 300-Bed Hospital — sponsored by Schneider Electric.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div class="cert-c">
+        <div class="cert-hdr">Professional Certifications &amp; Training</div>
+        <div class="cert-row"><div class="cy">2025</div><div class="cn">Quality &amp; Sheet Metal Manufacturing Masterclass</div><div class="ci">Schneider Electric</div></div>
+        <div class="cert-row"><div class="cy">2020</div><div class="cn">Electrical Services Design &amp; Home Automation — Graduation Sponsorship</div><div class="ci">Schneider Electric</div></div>
+        <div class="cert-row"><div class="cy">2019</div><div class="cn">MV &amp; LV Electrical Design — UTW 11</div><div class="ci">ECG</div></div>
+        <div class="cert-row"><div class="cy">2019</div><div class="cn">Lighting Design</div><div class="ci">Siraj Lighting</div></div>
+        <div class="cert-row"><div class="cy">2018</div><div class="cn">MV Network Electrical Design</div><div class="ci">S. Cairo Electricity Dist.</div></div>
+        <div class="cert-row"><div class="cy">2018</div><div class="cn">MV Network Concept</div><div class="ci">Cairo Intl. Airport</div></div>
+      </div>
+      <div class="cert-c">
+        <div class="cert-hdr">Volunteering</div>
+        <div class="cert-row"><div class="cy" style="color:var(--teal)">2016–17</div><div class="cn">Technical Support Instructor</div><div class="ci">IEEE, Shubra Faculty</div></div>
+        <div class="cert-row"><div class="cy" style="color:var(--teal)">2017</div><div class="cn">Head of PLC Section — AZEX Exhibition</div><div class="ci">Azhar University</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-sect">
+  <div class="contact-inner">
+    <div>
+      <div class="label">Get in Touch</div>
+      <h2>Let's work<br><em style="font-family:var(--serif);font-style:italic;color:var(--gold)">together.</em></h2>
+      <p style="margin-top:14px">Open to Pre-Sales Engineering, Tender Engineering, and Application Engineering roles — particularly in the KSA or UAE markets, or remote positions targeting the Gulf region. Always happy to discuss LV switchgear projects, AI-augmented workflows, or opportunities in the Schneider Electric ecosystem.</p>
+    </div>
+    <div class="cl">
+      <a href="mailto:eslammuhammad20@gmail.com" class="cl-link">
+        <div class="cl-icon">📧</div>
+        <div><div class="cl-lbl">Email</div><div class="cl-val">eslammuhammad20@gmail.com</div></div>
+      </a>
+      <a href="tel:+201156938996" class="cl-link">
+        <div class="cl-icon">📱</div>
+        <div><div class="cl-lbl">Phone / WhatsApp</div><div class="cl-val">+20 115 693 8996</div></div>
+      </a>
+      <a href="https://linkedin.com/in/eslammuhammad20" target="_blank" class="cl-link">
+        <div class="cl-icon">🔗</div>
+        <div><div class="cl-lbl">LinkedIn</div><div class="cl-val">linkedin.com/in/eslammuhammad20</div></div>
+      </a>
+      <a href="#" class="cl-link">
+        <div class="cl-icon">📍</div>
+        <div><div class="cl-lbl">Location</div><div class="cl-val">Cairo, Egypt — Open to KSA / UAE relocation</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fl"><strong>Eslam Muhammad Mahmoud</strong> &nbsp;·&nbsp; Pre-Sales &amp; Tender Engineer · LV Switchgear Specialist</div>
+  <div class="fr">Cairo, Egypt &nbsp;·&nbsp; KSA Market Specialist &nbsp;·&nbsp; © 2026</div>
+</footer>
+
+</div>
+</body>
+</html>
